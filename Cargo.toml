@@ -136,7 +136,7 @@ edition = "2021"
 [workspace.dependencies]
 Inflector = "0.11.4"
 aquamarine = "0.3.3"
-aes-gcm-siv = "0.10.3"
+aes-gcm-siv = "0.11.1"
 ahash = "0.8.7"
 anyhow = "1.0.79"
 ark-bn254 = "0.4.0"
@@ -490,26 +490,6 @@ solana-zk-token-sdk = { path = "zk-token-sdk" }
 #
 # When our dependencies are upgraded, we can remove these patches.  Before that
 # we might need to maintain these patches in sync with our full dependency tree.
-
-# Our dependency tree has `aes-gcm-siv` v0.10.3 and the `zeroize` restriction
-# was removed in the next commit just after the release.  So it seems safe to
-# patch to this commit.
-#
-# `aes-gcm-siv` v0.10.3 release:
-#
-# https://github.com/RustCrypto/AEADs/releases/tag/aes-gcm-siv-v0.10.3
-#
-# Corresponds to commit
-#
-# https://github.com/RustCrypto/AEADs/commit/6f16f4577a1fc839a2346cf8c5531c85a44bf5c0
-#
-# Comparison with `6105d7a5591aefa646a95d12b5e8d3f55a9214ef` pinned here:
-#
-# https://github.com/RustCrypto/AEADs/compare/aes-gcm-siv-v0.10.3..6105d7a5591aefa646a95d12b5e8d3f55a9214ef
-#
-[patch.crates-io.aes-gcm-siv]
-git = "https://github.com/RustCrypto/AEADs"
-rev = "6105d7a5591aefa646a95d12b5e8d3f55a9214ef"
 
 # We maintain a fork of `curve25519-dalek`. Within the forked repository,
 # the `3.2.1-fix-audit` branch contains patches for two issues:
