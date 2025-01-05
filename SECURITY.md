@@ -26,7 +26,7 @@ Expect a response as fast as possible in the advisory, typically within 72 hours
 
 If you do not receive a response in the advisory, send an email to
 security@solana.com with the full URL of the advisory you have created.  DO NOT
-include attachments or provide detail sufficient for exploitation regarding the
+include attachments or provide details sufficient for exploitation regarding the
 security issue in this email. **Only provide such details in the advisory**.
 
 If you do not receive a response from security@solana.com please followup with
@@ -38,10 +38,10 @@ role in the channel and referencing the fact that you submitted a security probl
 ## Incident Response Process
 
 In case an incident is discovered or reported, the following process will be
-followed to contain, respond and remediate:
+followed to contain, respond, and remediate:
 
 ### 1. Accept the new report
-In response a newly reported security problem, a member of the
+In response to a newly reported security problem, a member of the
 `anza-xyz/admins` group will accept the report to turn it into a draft
 advisory.  The `anza-xyz/security-incident-response` group should be added to
 the draft security advisory, and create a private fork of the repository (grey
@@ -57,7 +57,7 @@ Within the draft security advisory, discuss and determine the severity of the is
 If it is determined that this is not a critical network issue then the advisory should be closed and if more follow-up is required a normal Solana public github issue should be created.
 
 ### 3. Prepare Fixes
-For the affected branches, typically all three (edge, beta and stable), prepare a fix for the issue and push them to the corresponding branch in the private repository associated with the draft security advisory.
+For the affected branches, typically all three (edge, beta, and stable), prepare a fix for the issue and push it to the corresponding branch in the private repository associated with the draft security advisory.
 There is no CI available in the private repository so you must build from source and manually verify fixes.
 Code review from the reporter is ideal, as well as from multiple members of the core development team.
 
