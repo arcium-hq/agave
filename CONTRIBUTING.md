@@ -4,7 +4,7 @@ The goal of these guidelines is to improve developer productivity by allowing
 developers to jump into any file in the codebase and not need to adapt to
 inconsistencies in how the code is written. The codebase should appear as if it
 had been authored by a single developer. If you don't agree with a convention,
-submit a PR patching this document and let's discuss! Once the PR is accepted,
+submit a PR patching this document, and let's discuss! Once the PR is accepted,
 *all* code should be updated as soon as possible to reflect the new
 conventions.
 
@@ -45,7 +45,7 @@ $ git pull --rebase upstream master
 
 If there are no functional changes, PRs can be very large and that's no
 problem. If, however, your changes are making meaningful changes or additions,
-then about 1,000 lines of changes is about the most you should ask a Solana
+then about 1,000 lines of changes are about the most you should ask a Solana
 maintainer to review.
 
 ### Should I send small PRs as I develop large, new components?
@@ -59,7 +59,7 @@ may be pulled in with a package manager.
 ## Getting Pull Requests Merged
 
 There is no single person assigned to watching GitHub PR queue and ushering you
-through the process. Typically, you will ask the person that wrote a component
+through the process. Typically, you will ask the person who wrote a component
 to review changes to it. You can find the author using `git blame` or asking on
 Discord.  When working to get your PR merged, it's most important to understand
 that changing the code is your priority and not necessarily a priority of the
@@ -74,7 +74,7 @@ minutes to execute. Use that time to write a detailed problem description. Once
 the description is written and CI succeeds, click the "Ready to Review" button
 and add reviewers. Adding reviewers before CI succeeds is a fast path to losing
 reviewer engagement. Not only will they be notified and see the PR is not yet
-ready for them, they will also be bombarded with additional notifications
+ready for them, but they will also be bombarded with additional notifications
 each time you push a commit to get past CI or until they "mute" the PR. Once
 muted, you'll need to reach out over some other medium, such as Discord, to
 request they have another look. When you use draft PRs, no notifications are
@@ -99,7 +99,7 @@ more important than competing issues, don't expect the reviewer to read on.
 
 Next, the reviewer will read the proposed changes. At this point, the reviewer
 needs to be convinced the proposed changes are a *good* solution to the problem
-described above.  If the proposed changes, not the code changes, generates
+described above.  If the proposed changes, not the code changes, generate
 discussion, consider closing the PR and returning with a design proposal
 instead.
 
@@ -148,7 +148,7 @@ matches the logical flow in your PR description.
 
 ### The PR / Issue Labels
 
-Labels make it easier to manage and track PRs / issues.  Below some common labels
+Labels make it easier to manage and track PRs / issues.  Below are some common labels
 that we use in Solana.  For the complete list of labels, please refer to the
 [label page](https://github.com/solana-labs/solana/issues/labels):
 
@@ -158,11 +158,11 @@ New feature gates should also always have a corresponding tracking issue
 (go to "New Issue" -> "Feature Gate Tracker [Get Started](https://github.com/solana-labs/solana/issues/new?assignees=&labels=feature-gate&template=1-feature-gate.yml&title=Feature+Gate%3A+)")
 and should be updated each time the feature is activated on a cluster.
 
-* "automerge": When a PR is labelled with "automerge", the PR will be
+* "auto-merge": When a PR is labeled with "auto-merge", the PR will be
 automatically merged once CI passes.  In general, this label should only
-be used for small hot-fix (fewer than 100 lines) or automatic generated
+be used for small hot-fix (fewer than 100 lines) or automatically generated
 PRs.  If you're uncertain, it's usually the case that the PR is not
-qualified as "automerge".
+qualified as "auto-merge".
 
 * "good first issue": If you happen to find an issue that is non-urgent and
 self-contained with moderate scope, you might want to consider attaching
@@ -180,7 +180,7 @@ closed automatically 7 days later.
 ### How to manage review feedback?
 
 After a reviewer provides feedback, you can quickly say "acknowledged, will
-fix" using a thumb's up emoji. If you're confident your fix is exactly as
+fix" using a thumb 's-up emoji. If you're confident your fix is exactly as
 prescribed, add a reply "Fixed in COMMIT\_HASH" and mark the comment as
 resolved. If you're not sure, reply "Is this what you had in mind?
 COMMIT\_HASH" and if so, the reviewer will reply and mark the conversation as
@@ -203,7 +203,7 @@ your PR easy to say "yes" to.
 Non-exhaustive list of things that make it *harder* to review:
 
 * Additional changes that are orthogonal to the problem statement and proposed
-  changes. Instead move those changes to a different PR.
+  changes. Instead, move those changes to a different PR.
 * Renaming variables/functions/types unnecessarily and/or without explanation.
 * Not following established conventions in the function/module/crate/repo.
 * Changing whitespace: moving code and/or reformatting code. Make such changes
@@ -282,7 +282,7 @@ edition = "2021"
   installed, it will be updated automatically when you update the compiler with
 `rustup`.
 
-* All Rust code is linted with Clippy. If you'd prefer to ignore its advice, do
+* All Rust code is linked with Clippy. If you'd prefer to ignore its advice, do
   so explicitly:
 
   ```rust
@@ -299,7 +299,7 @@ has multiple instances of the same type, qualify each with a prefix and
 underscore (i.e. alice\_keypair) or a numeric suffix (i.e. tx0).
 
 * For function and method names, use `<verb>_<subject>`. For unit tests, that
-  verb should always be `test` and for benchmarks the verb should always be
+  verb should always be `test` and for benchmarks, the verb should always be
 `bench`. Avoid namespacing function names with some arbitrary word. Avoid
 abbreviating words in function names.
 

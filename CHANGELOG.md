@@ -22,7 +22,7 @@ Release channels have their own copy of this changelog:
     * removed the unreleased `redelegate` instruction processor and CLI commands (#2213)
 * Changes
   * SDK: removed the `respan` macro. This was marked as "internal use only" and was no longer used internally.
-  * `agave-validator`: Update PoH speed check to compare against current hash rate from a Bank (#2447)
+  * `agave-validator`: Update PoH speed check to compare against the current hash rate from a Bank (#2447)
   * `solana-test-validator`: Add `--clone-feature-set` flag to mimic features from a target cluster (#2480)
 
 ## [2.0.0]
@@ -47,7 +47,7 @@ Release channels have their own copy of this changelog:
     * `--incremental-snapshots` (#2148)
     * `--halt-on-known-validators-accounts-hash-mismatch` (#2157)
 * Changes
-  * `central-scheduler` as default option for `--block-production-method` (#34891)
+  * `central-scheduler` as the default option for `--block-production-method` (#34891)
   * `solana-rpc-client-api`: `RpcFilterError` depends on `base64` version 0.22, so users may need to upgrade to `base64` version 0.22
   * Changed default value for `--health-check-slot-distance` from 150 to 128
   * CLI: Can specify `--with-compute-unit-price`, `--max-sign-attempts`, and `--use-rpc` during program deployment
@@ -57,8 +57,8 @@ Release channels have their own copy of this changelog:
   * CLI: Can specify `--full-snapshot-archive-path` (#1631)
   * transaction-status: The SPL Token `amountToUiAmount` instruction parses the amount into a string instead of a number (#1737)
   * Implemented partitioned epoch rewards as per [SIMD-0118](https://github.com/solana-foundation/solana-improvement-documents/blob/fae25d5a950f43bd787f1f5d75897ef1fdd425a7/proposals/0118-partitioned-epoch-reward-distribution.md). Feature gate: #426. Specific changes include:
-    * EpochRewards sysvar expanded and made persistent (#428, #572)
-    * Stake Program credits now allowed during distribution (#631)
+    * EpochRewards sys var expanded and made persistent (#428, #572)
+    * Stake Program credits are now allowed during distribution (#631)
     * Updated type in Bank::epoch_rewards_status (#1277)
     * Partitions are recalculated on boot from snapshot (#1159)
     * `epoch_rewards_status` removed from snapshot (#1274)
@@ -126,13 +126,13 @@ makes the feature code complete.
     * dapp or client developers to make changes.
 * Link to any relevant feature gate issues or SIMDs.
 * If you add entries on multiple branches use the same wording if possible.
-This simplifies the process of diffing between versions of the log.
+This simplifies the process of differentiating between versions of the log.
 
 ## Maintaining This Changelog
 ### When creating a new release branch:
 * Commit to master updating the changelog:
   * Update the edge, beta, and stable links
-  * Create new section: `vx.y+1.0 - Unreleased`
+  * Create a new section: `vx.y+1.0 - Unreleased`
   * Remove `Unreleased` annotation from vx.y.0 section.
 * Create vx.y branch starting at that commit
 * Tag that commit as vx.y.0

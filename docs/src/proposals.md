@@ -20,7 +20,7 @@ Each proposal may be implemented as described, implemented differently as issues
 
 These architectural proposals have been accepted and implemented by the Solana team.
 
-Any designs that may be subject to future change are noted in their specific proposal page.
+Any designs that may be subject to future change are noted on their specific proposal page.
 
 ## Submit a Design Proposal
 
