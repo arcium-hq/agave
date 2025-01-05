@@ -81,7 +81,7 @@ for at least one full minor version before removal.
     git push -u origin <branchname>
     ```
 
-Alternatively use the Github UI.
+Alternatively, use the Github UI.
 
 ### Update master branch to the next release minor version
 
@@ -101,7 +101,7 @@ Alternatively use the Github UI.
     ci/channel-info.sh
     ```
 
-### Miscellaneous Clean up
+### Miscellaneous Clean-up
 
 1. Pin the spl-token-cli version in the newly promoted stable branch by setting `splTokenCliVersion` in scripts/spl-token-cli-version.sh to the latest release that depends on the stable branch (usually this will be the latest spl-token-cli release).
 1. Update [mergify.yml](https://github.com/anza-xyz/agave/blob/master/.mergify.yml) to add backport actions for the new branch and remove actions for the obsolete branch.
@@ -126,10 +126,10 @@ Alternatively use the Github UI.
 1. Ensure all desired commits (usually backports) are landed on the branch by now.
 1. Ensure the release is marked **"This is a pre-release"**.  This flag will need to be removed manually after confirming the Linux binary artifacts appear at a later step.
 1. Go back into edit the release and click "Publish release" while being marked as a pre-release.
-1. Confirm there is new git tag with intended version number at the intended revision after running `git fetch` locally.
+1. Confirm there is a new git tag with the intended version number at the intended revision after running `git fetch` locally.
 
 
-### Update release branch with the next patch version
+### Update the release branch with the next patch version
 
 [This action](https://github.com/anza-xyz/agave/blob/master/.github/workflows/increment-cargo-version-on-release.yml) ensures that publishing a release will trigger the creation of a PR to update the Cargo.toml files on **release branch** to the next semantic version (e.g. 0.9.0 -> 0.9.1). Ensure that the created PR makes it through CI and gets submitted.
 
@@ -148,7 +148,7 @@ appearing.  To check for progress:
 * The `agave-secondary` Buildkite pipeline handles creating the Linux and macOS release artifacts and updated crates.  Look for a job under the tag name of the release: https://buildkite.com/anza-xyz/agave-secondary.
 * The Windows release artifacts are produced by GitHub Actions.  Look for a job under the tag name of the release: https://github.com/anza-xyz/agave/actions.
 
-[Crates.io agave-validator](https://crates.io/crates/agave-validator) should have an updated agave-validator version.  This can take 2-3 hours, and sometimes fails in the `agave-secondary` job.
+[Crates.io agave-validator](https://crates.io/crates/agave-validator) should have an updated agave-validator version.  This can take 2-3 hours and sometimes fails in the `agave-secondary` job.
 If this happens and the error is non-fatal, click "Retry" on the "publish crate" job
 
 ### Update software on testnet.solana.com
