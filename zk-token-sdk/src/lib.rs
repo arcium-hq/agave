@@ -27,7 +27,7 @@ pub mod encryption;
 mod range_proof;
 mod sigma_proofs;
 #[cfg(not(target_os = "solana"))]
-mod transcript;
+pub mod transcript;
 
 pub mod errors;
 pub mod instruction;
