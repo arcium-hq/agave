@@ -24,7 +24,7 @@ pub use solana_curve25519 as curve25519;
 pub(crate) mod macros;
 #[cfg(not(target_os = "solana"))]
 pub mod encryption;
-mod range_proof;
+pub mod range_proof;
 mod sigma_proofs;
 #[cfg(not(target_os = "solana"))]
 pub mod transcript;
