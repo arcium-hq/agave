@@ -112,7 +112,7 @@ impl BulletproofGens {
     }
 
     #[allow(non_snake_case)]
-    pub(crate) fn G(&self, n: usize) -> impl Iterator<Item = &RistrettoPoint> {
+    pub fn G(&self, n: usize) -> impl Iterator<Item = &RistrettoPoint> {
         GensIter {
             array: &self.G_vec,
             n,
@@ -121,7 +121,7 @@ impl BulletproofGens {
     }
 
     #[allow(non_snake_case)]
-    pub(crate) fn H(&self, n: usize) -> impl Iterator<Item = &RistrettoPoint> {
+    pub fn H(&self, n: usize) -> impl Iterator<Item = &RistrettoPoint> {
         GensIter {
             array: &self.H_vec,
             n,
